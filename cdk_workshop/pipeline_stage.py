@@ -1,4 +1,3 @@
-from msilib.schema import ServiceControl
 from constructs import Construct
 from aws_cdk import (
     Stage

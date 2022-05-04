@@ -17,7 +17,7 @@ class WorkshopPipelineStack(Stack):
         )
         pipeline = pipelines.CodePipeline(
             self,
-            "Pipeline",
+            "WorkshopPipeline",
             synth=pipelines.ShellStep(
                 "Synth",
                 input=pipelines.CodePipelineSource.code_commit(repo,"master"),

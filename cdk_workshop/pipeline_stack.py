@@ -1,10 +1,11 @@
+from http.cookiejar import DefaultCookiePolicy
 from constructs import Construct
 from aws_cdk import (
     Stack,
     aws_codecommit as codecommit,
     pipelines as pipelines
 )
-# from cdk_workshop.pipeline_stage import WorkshopPipelineStage
+from cdk_workshop.pipeline_stage import WorkshopPipelineStage
 
 class WorkshopPipelineStack(Stack):
     def __init__(self, scope: Construct, id: str, **kwargs) -> None:
@@ -28,3 +29,6 @@ class WorkshopPipelineStack(Stack):
                 ]
             )
         )
+
+        deploy  = WorkshopPipelineStage(self,"Deploy")
+        deploy_stage = pipeline.add_stage(deploy)

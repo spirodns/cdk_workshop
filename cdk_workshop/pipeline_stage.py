@@ -4,7 +4,7 @@ from aws_cdk import (
 )
 from .cdk_workshop_stack import CdkWorkshopStack
 
-class WorkshooPipelineStage(Stage):
+class WorkshopPipelineStage(Stage):
     def __init__(self, scope: Construct, id: str, **kwargs):
         super().__init__(scope, id, **kwargs)
 
